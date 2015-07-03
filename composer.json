@@ -1,0 +1,14 @@
+{
+    "name": "chris.marlow/null-object-presentation",
+    "description": "A repo to guide you in TDDing a monad",
+    "require": {
+        "phpunit/phpunit": "^4.7"
+    },
+    "authors": [
+        {
+            "name": "Chris Marlow",
+            "email": "chris.marlow@achievers.com"
+        }
+    ],
+    "minimum-stability": "alpha"
+}
