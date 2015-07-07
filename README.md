@@ -11,6 +11,9 @@ $order = [
   ];
 ];
 $brokenOrder = [];
+
+// The lens will try to access the properties specified on an object, 
+// or use the default value given
 $getFirstName = new Lens(['purchaser', 'name', 'first'], "Unknown");
 
 $getFirstName->get( $order );       //=> "Bob"
