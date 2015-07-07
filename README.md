@@ -13,6 +13,6 @@ $order = [
 $brokenOrder = [];
 $getFirstName = new Lens(['purchaser', 'name', 'first'], "Unknown");
 
-$getFirstName->get( $order )       //=> "Bob"
-$getFirstName->get( $brokenOrder ) //=> "Unknown"
+$getFirstName->get( $order );       //=> "Bob"
+$getFirstName->get( $brokenOrder ); //=> "Unknown"
 ```
