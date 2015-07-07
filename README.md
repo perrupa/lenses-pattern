@@ -22,3 +22,19 @@ $firstNameLens = new Lens(['purchaser', 'name', 'first'], "Unknown");
 $firstNameLens->get( $order );       //=> "Bob"
 $firstNameLens->get( $brokenOrder ); //=> "Unknown"
 ```
+
+## Straw man argument
+
+Compare the following:
+`$lens = new Lens(['purchaser', 'name', 'first'], "default");`
+vs
+```
+if( array_key_exists( "puchaser", $obj ) 
+    && array_key_exists( "name", $obj['puchaser'] ) 
+    && array_key_exists( "first", $obj['puchaser']['name'] ) 
+    && !empty( $obj['puchaser']['name']['first'] ) ) {
+  $value = $obj['puchaser']['name']['first'];
+} else {
+  $value = "default";
+}
+```
