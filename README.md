@@ -1,8 +1,9 @@
 # The Lens Pattern
 
-This is my very naive interpretation of the Lens Pattern (again, as I understand it).
+This is my very naive interpretation of the Lens Pattern (...as I understand it).
 
-I'm intending it to be used in the following way:
+I'm intending it to be used in the following way; to avoid value checking to avoid `NullReferenceError`s and provide defalut values when the expected value does not exist.
+
 ```php
 // object w/ nested attributes
 $order = [
