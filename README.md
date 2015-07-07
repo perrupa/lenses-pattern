@@ -14,8 +14,8 @@ $brokenOrder = [ 'details' => null, 'purchaser' => null ];
 
 // The lens will try to access the properties specified on an object, 
 // or use the default value given
-$getFirstName = new Lens(['purchaser', 'name', 'first'], "Unknown");
+$firstNameLens = new Lens(['purchaser', 'name', 'first'], "Unknown");
 
-$getFirstName->get( $order );       //=> "Bob"
-$getFirstName->get( $brokenOrder ); //=> "Unknown"
+$firstNameLens->get( $order );       //=> "Bob"
+$firstNameLens->get( $brokenOrder ); //=> "Unknown"
 ```
