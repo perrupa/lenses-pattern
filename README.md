@@ -23,11 +23,9 @@ $firstNameLens->get( $order );       //=> "Bob"
 $firstNameLens->get( $brokenOrder ); //=> "Unknown"
 ```
 
-## Straw man argument
+## Straw man argument 
 
-Compare the following:
-`$lens = new Lens(['purchaser', 'name', 'first'], "default");`
-vs
+Typical value checking:
 ```
 if( array_key_exists( "puchaser", $obj ) 
     && array_key_exists( "name", $obj['puchaser'] ) 
@@ -37,4 +35,10 @@ if( array_key_exists( "puchaser", $obj )
 } else {
   $value = "default";
 }
+```
+
+Using Lenses
+```
+$lens = new Lens(['purchaser', 'name', 'first'], "default");
+$value = $lens->get( $obj );
 ```
