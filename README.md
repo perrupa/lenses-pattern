@@ -8,7 +8,7 @@ $order = [
   'details' => [...],
   'purchaser' => [
     'name' => ['first' => 'Bob', 'last' => 'Loblaw']
-  ];
+  ]
 ];
 $brokenOrder = [ 'details' => null, 'purchaser' => null ];
 
