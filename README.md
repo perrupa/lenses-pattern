@@ -4,12 +4,14 @@ This is my very naive interpretation of the Lens Pattern (again, as I understand
 
 I'm intending it to be used in the following way:
 ```php
+// object w/ nested attributes
 $order = [
   'details' => [...],
   'purchaser' => [
     'name' => ['first' => 'Bob', 'last' => 'Loblaw']
   ]
 ];
+// object w/ some null attributes
 $brokenOrder = [ 'details' => null, 'purchaser' => null ];
 
 // The lens will try to access the properties specified on an object, 
