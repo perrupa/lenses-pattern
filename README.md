@@ -10,7 +10,7 @@ $order = [
     'name' => ['first' => 'Bob', 'last' => 'Loblaw']
   ];
 ];
-$brokenOrder = [];
+$brokenOrder = [ 'details' => null, 'purchaser' => null];
 
 // The lens will try to access the properties specified on an object, 
 // or use the default value given
